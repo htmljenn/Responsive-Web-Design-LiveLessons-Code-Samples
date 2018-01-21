@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Tables</title>
+<style>
+/* styles for all devices */
+table {
+  border-collapse: collapse;
+}
+/* zebra stripe the table */
+table tbody tr:nth-child(odd)    {
+  background-color: #dfdfdf;
+}
+thead tr {
+  background-color: #6E2B75;
+  color: #efefef;
+}
+
+/* hide the important and optional columns from small screens */
+@media screen and (max-width:480px) {
+  .optional, .important,
+  tr td:nth-child(2), 
+  tr td:nth-child(4),
+  tr td:nth-child(5){
+    display: none;
+  }
+}
+
+/* hide the optional columns from medium width screens */
+@media screen and (min-width:481px) and (max-width:780px) {
+  .optional,
+  tr td:nth-child(2) {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+<table width="100%" border="1">
+  <thead>
+    <tr>
+      <th class="required">Name</th>
+      <th class="optional">URL</th>
+      <th class="required">RWD?</th>
+      <th class="important">Windows</th>
+      <th class="important">Macintosh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adobe Dreamweaver</td>
+      <td>http://www.adobe.com/products/dreamweaver.html</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Macaw</td>
+      <td>http://macaw.co/</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Coffee Cup Responsive Layout Maker Pro</td>
+      <td>http://www.coffeecup.com/responsive-layout-maker-pro/</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Microsoft Notepad</td>
+      <td>http://www.notepad.org/</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Tummult Hype</td>
+      <td>http://tumult.com/hype/</td>
+      <td>no</td>
+      <td>no</td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
