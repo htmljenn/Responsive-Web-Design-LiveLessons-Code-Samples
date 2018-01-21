@@ -1,0 +1,147 @@
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:900)
+screen and (min-width: 400px);
+/* styles for all browser widths */
+/* very basic reset */
+* { font-size: 100%; }
+*, *:before, *:after { 
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display SC', serif; line-height: 1.2; }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.7em; }
+h3 { font-size: 1.3em; }
+p, ul, ol, dl { font-size: 1em; line-height: 1.275; }
+#bodyContent, footer { margin: 0 0.2em; }
+
+/* images 
+img { width: 100%; max-width: 100%; height: auto; } */ 
+
+/* nav bar */
+nav {
+  width: 100%;
+  margin: auto;  
+}
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  background: #000;
+}
+nav li a {
+  display: block;
+  float: left;
+  width: 14.28%; 
+  padding: 10px;
+  background: #000;
+  border-right: 1px solid #fff;
+  color: #fbd91f;  
+  font: 400 13px/1.4 bitstream_vera_serifbold, Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;	
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* small text */
+nav small {
+  color: #aaa;  
+  font: 100 11px/1 Helvetica, Verdana, Arial, sans-serif;
+  text-transform: none;
+}
+/* default to smallest browser size */ 
+nav ul { display: none; }
+nav select { display: inline-block; margin: 0.5em 0; }
+
+/*header */
+header {
+  background: url(images/dandy-header-bg-small.png) bottom left no-repeat;
+  color: #EDEE6A;
+  text-shadow: 3px 2px #000000;
+}
+
+/* flex width images */
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* styles for smartphones and tablets */
+@media screen and (min-width: 400px)  {
+	h1 { font-size: 3em; }
+	h2 { font-size: 2em; }
+	h3 { font-size: 1.5em; }
+  #bodyContent { margin-right: 0; }
+  header {
+    background: url(images/dandy-header-bg.png) bottom left no-repeat;
+  }
+}
+/* styles just for smartphones */
+@media screen and (min-width: 400px) and (max-width: 970px) {
+  
+  /* two columns */ 
+  #mainarticle {
+    width: 50%;
+    float: left;
+    padding-right: 2em;
+  }
+  .sidebars {
+    width: 48%;
+    float: right; 
+  }
+  
+  /* header */
+  header { 
+    height: 10em;
+  }
+  
+}
+/* change to full nav for larger screens */ 
+@media screen and (min-width: 481px) {
+  nav ul { display: block; }
+  nav select { display: none; }
+}
+/* styles for the largest screens */
+@media screen and (min-width: 971px) {
+  /* three columns */
+  #mainarticle {
+    width: 40%; 
+    float: left;
+    padding-right: 2em;
+  }
+  .sidebars {
+    width: 60%;
+    float: right; 
+  }
+  .sidebars #links {
+    width: 30%;
+    float: left; 
+  }
+  .sidebars #sidebar {
+    width: 65%;
+    float: right;
+  }
+  /* header */
+  header {
+    height: 20em;
+  }
+  header h1 {
+    padding-top: 1.5em;
+    padding-left: 0.5em;
+  }
+  header h2 {
+    padding-left: 6em;
+    padding-top: 1em;
+  }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Dandylions</title>
+    <link href="dandylion-images.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1>Dandylions</h1>
+        <h2>Not Your Mother's Weed</h2>
+      </header>
+      <nav>
+        <ul id="navigation">
+          <li><a href="#">Home<br> 
+          <small>Where Dandelions roam free</small></a></li>
+          <li><a href="#">Products<br> 
+          <small>These flowers will grow on you</small></a></li>
+          <li><a href="#">Services<br> 
+          <small>We care for the flowers you have</small></a></li>
+          <li><a href="#">Support<br> 
+          <small>We love to help with dandelions</small></a></li>
+          <li><a href="#">About<br> 
+          <small>Why we love dandelions so much</small></a></li>
+          <li><a href="#">Reading<br> 
+          <small>Read more about this wondrous plant</small></a></li> 
+          <li><a href="#">Contact<br> 
+          <small>Ask us about your dandelion needs</small></a></li>
+        </ul>
+        <select id="mobileNav">
+          <option value="">Go to...</option>
+          <option value="/home">Home</option>
+          <option value="/products">Products</option>
+          <option value="/services">Services</option>
+          <option value="/support">Support</option>
+          <option value="/about">About</option>
+          <option value="/articles">Reading</option>
+          <option value="/contact">Contact</option>
+        </select>
+      </nav>
+      <div id="bodyContent" class="clearfix"> 
+        <article id="mainarticle">
+          <h3>What is a Dandelion?</h3>
+          <p><span class="pronounce"><strong><em>Taraxacum</em></strong>
+          <em>/təˈræksəkʉm/</em></span> is a large genus of flowering plants in
+          the family Asteraceae. They are native to Eurasia and North and South
+          America, and two species, T. officinale and T. erythrospermum, are
+          found as weeds worldwide. Both species are edible in their entirety.
+          The common name <span class="pronounce"><strong>dandelion</strong>
+          <em>/ˈdændɨlaɪ.ən/</em></span> (dan-di-ly-ən, from French
+          dent-de-lion, meaning "lion's tooth") is given to members of the
+          genus, and like other members of the Asteraceae family, they have very
+          small flowers collected together into a composite flower head. Each
+          single flower in a head is called a floret. Many <em>Taraxacum</em>
+          species produce seeds asexually by apomixis, where the seeds are
+          produced without pollination, resulting in offspring that are
+          genetically identical to the parent plant.</p>
+        </article>
+      <div class="sidebars">
+      <aside id="links">
+        <h3>Learn More About Dandelions</h3>
+        <ul>
+          <li><a href="http://chemistry.about.com/b/2013/07/26/do-dandelions-burn-in-colors.htm">Do Dandelions Burn in Colors?</a></li>
+          <li><a href="http://herbgardens.about.com/od/herbrecipes/tp/10-uses-for-dandelions.htm">Top 5 Things To Do With Dandelion</a></li>
+          <li><a href="http://organicgardening.about.com/od/howtogrowveggies/a/How-To-Grow-Dandelion-Greens.htm">How to Grow and Harvest Dandelion Greens</a></li>
+          <li><a href="http://homecooking.about.com/od/condimentrecipes/r/bljelly9.htm">Dandelion Honey Recipe</a></li>
+          <li><a href="http://landscaping.about.com/od/weedsdiseases/a/kill_dandelions_2.htm">Get Rid of Dandelions the Smart Way&#8212;Eat Them!</a></li>
+        </ul>
+      </aside>
+      <aside id="sidebar">
+        <p><img src="images/dandy.jpg" width="400" height="300" alt=""/></p>
+        <p><img src="images/seeded.jpg" width="400" height="300" alt=""/></p>
+      </aside>
+        </div><!-- end sidebars -->
+      </div> <!-- end bodyContent -->
+      <footer>
+        <p>Text from 
+        <a href="http://en.wikipedia.org/wiki/Dandelion">Wikipedia</a></p>
+      </footer>
+    </div><!-- end main -->
+    <script>
+    $(function() {
+    $("nav select").change(function() {
+    window.location = $(this).find("option:selected").val();
+    });
+    });
+    </script>
+  </body>
+</html>

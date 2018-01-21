@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cropping Images with CSS</title>
+  <style>
+  .cropped {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .cropped img {
+    position: relative;
+    right: 20px;
+  }
+  </style>
+</head>
+<body>
+  <p>
+  <img src="images/seeded.jpg" width="400" height="300" alt=""/>
+  </p>
+  <p class="cropped">
+  <img src="images/seeded.jpg" width="400" height="300" alt=""/>
+  </p>
+
+</body>
+</html>
