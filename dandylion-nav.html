@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic Navigation HTML</title>
+
+<link href="dandylion-nav-select.css" rel="stylesheet" type="text/css">
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<nav>
+    <ul id="navigation">
+        <li><a href="#">Home<br> 
+        <small>Where Dandelions roam free</small></a></li>
+        <li><a href="#">Products<br> 
+        <small>These flowers will grow on you</small></a></li>
+        <li><a href="#">Services<br> 
+        <small>We care for the flowers you have</small></a></li>
+        <li><a href="#">Support<br> 
+        <small>We love to help with dandelions</small></a></li>
+        <li><a href="#">About<br> 
+        <small>Why we love dandelions so much</small></a></li>
+        <li><a href="#">Reading<br> 
+        <small>Read more about this wondrous plant</small></a></li> 
+        <li><a href="#">Contact<br> 
+        <small>Ask us about your dandelion needs</small></a></li>
+    </ul>
+
+  <select id="mobileNav">
+  <option value="">Go to...</option>
+  <option value="/">Home</option>
+  <option value="/products">Products</option>
+  <option value="/services">Services</option>
+  <option value="/support">Support</option>
+  <option value="/about">About</option>
+  <option value="/articles">Reading</option>
+  <option value="/contact">Contact</option>
+</select>
+
+</nav>
+
+
+<script>
+$(function() {
+  $("nav select").change(function() {
+    window.location = $(this).find("option:selected").val();
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* CSS Document */
+
+html, body { margin: 0; padding: 0; border: 0; }
+body { background-color: #dfdfdf; }
+#main { 
+	width: 100%;
+	background-color: #fff;
+	margin: 0 auto;
+}
+header, article, aside, footer, nav {
+	width: 100%;
+}
+nav ul, nav ul li { 
+	display: block; 
+	list-style-type: none; 
+	padding: 0; 
+	margin: 0; 
+}
+
+nav ul li {
+	background-color: black;
+	color: white;
+	padding: 2% 1%;
+	border: 1px solid #DFDFDF;
+}
+
+@media screen and (min-width: 481px) {
+	nav ul { 
+		background-color: #000;
+		padding: 2% 1%;
+	}
+	nav ul li { 
+		width: 20%;
+		display: inline; 
+		border: none;
+		border-right: 1px solid #dfdfdf;
+		padding-right: 2%;
+	}
+	article, aside { width: 48%; float: left; }
+	#col2, footer { width: 48%; float: right;  }
+	aside img { width: 100%; height: auto; }
+}
+@media screen and (min-width:481px) and  (max-width: 800px){
+	#main { width: 90%; }
+}
+@media screen and (min-width: 801px){
+	#main { width: 70%; }
+}
